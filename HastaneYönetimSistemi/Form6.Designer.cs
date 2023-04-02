@@ -59,7 +59,7 @@ namespace HastaneYönetimSistemi
             // 
             resources.ApplyResources(this.dateTimePicker1, "dateTimePicker1");
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Value = new System.DateTime(2023, 3, 27, 0, 0, 0, 0);
+            this.dateTimePicker1.Value = new System.DateTime(2023, 3, 31, 0, 0, 0, 0);
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // button1

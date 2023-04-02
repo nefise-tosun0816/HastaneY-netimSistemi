@@ -35,5 +35,13 @@ namespace HastaneYönetimSistemi
             form6.Show();
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            KayitFormu kayitFormu = new KayitFormu();
+            kayitFormu.Show();
+            this.Hide();
+
+        }
     }
 }

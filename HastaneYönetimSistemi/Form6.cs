@@ -29,10 +29,17 @@ namespace HastaneYönetimSistemi
         }
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
+
+            DateTimePicker dateTimePicker1 = new DateTimePicker();
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker1.CustomFormat = " "; // varsayılan değer olarak boşluk atanır
-            dateTimePicker1.ShowCheckBox = true; // onay kutusunu göster
-            dateTimePicker1.Checked = false; // varsayılan olarak işaretlenmemiş
+            dateTimePicker1.CustomFormat = "dd.MM.yyyy";
+
+            // DateTimePicker'in ValueChanged olayını kullanarak tarih değiştiğinde çalışacak kod
+           
+                // Seçilen tarihi messagebox ile göstermek için
+                MessageBox.Show(dateTimePicker1.Value.ToString("dd.MM.yyyy"));
+            
+
         }
 
         private void button1_Click(object sender, EventArgs e)

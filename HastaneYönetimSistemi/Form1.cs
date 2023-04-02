@@ -23,6 +23,7 @@ namespace HastaneYönetimSistemi
             form2.Show();
             this.Hide();
             
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -30,6 +31,8 @@ namespace HastaneYönetimSistemi
             Form3 form3 = new Form3();
             form3.Show();
             this.Hide();
+            
+
         }
 
         private void button4_Click(object sender, EventArgs e)

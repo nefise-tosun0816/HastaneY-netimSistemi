@@ -33,10 +33,11 @@ namespace HastaneYönetimSistemi
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.butondoktor = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,16 +84,16 @@ namespace HastaneYönetimSistemi
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // butondoktor
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button2.Location = new System.Drawing.Point(213, 279);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(165, 65);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "DOKTOR GİRİŞİ";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.butondoktor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.butondoktor.Location = new System.Drawing.Point(213, 279);
+            this.butondoktor.Name = "butondoktor";
+            this.butondoktor.Size = new System.Drawing.Size(165, 65);
+            this.butondoktor.TabIndex = 5;
+            this.butondoktor.Text = "DOKTOR GİRİŞİ";
+            this.butondoktor.UseVisualStyleBackColor = true;
+            this.butondoktor.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -133,7 +134,7 @@ namespace HastaneYönetimSistemi
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.butondoktor);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -154,9 +155,10 @@ namespace HastaneYönetimSistemi
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button butondoktor;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 

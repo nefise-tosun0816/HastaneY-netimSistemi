@@ -210,6 +210,9 @@
   <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="dateTimePicker1.CustomFormat" xml:space="preserve">
+    <value />
+  </data>
   <data name="dateTimePicker1.Location" type="System.Drawing.Point, System.Drawing">
     <value>288, 290</value>
   </data>
