@@ -256,6 +256,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HastaKayıtDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="HastaneRandevu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HastaneRandevu.Designer.cs">
+      <DependentUpon>HastaneRandevu.cs</DependentUpon>
+    </Compile>
     <Compile Include="KayitFormu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -288,6 +294,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form6.resx">
       <DependentUpon>Form6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HastaneRandevu.resx">
+      <DependentUpon>HastaneRandevu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KayitFormu.resx">
       <DependentUpon>KayitFormu.cs</DependentUpon>

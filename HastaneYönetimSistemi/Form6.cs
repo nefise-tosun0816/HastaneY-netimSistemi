@@ -27,34 +27,69 @@ namespace HastaneYönetimSistemi
                 form5.Show();
             }
         }
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-            DateTimePicker dateTimePicker1 = new DateTimePicker();
-            dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker1.CustomFormat = "dd.MM.yyyy";
-
-            // DateTimePicker'in ValueChanged olayını kullanarak tarih değiştiğinde çalışacak kod
-           
-                // Seçilen tarihi messagebox ile göstermek için
-                MessageBox.Show(dateTimePicker1.Value.ToString("dd.MM.yyyy"));
-            
-
-        }
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (dateTimePicker1.Checked)
+            HastaneRandevu HastaneRandevu = new HastaneRandevu();
+            HastaneRandevu.Show();
+            this.Hide();
+        }
+
+        private void textBox2_VisibleChanged(object sender, EventArgs e)
+        {
+            textBox2.Text = "şifre";
+            textBox2.ForeColor = Color.Gray;
+        }
+
+        private void textBox2_Enter(object sender, EventArgs e)
+        {
+            // TextBox nesnesi odak kazandığında, varsayılan metni kontrol edin ve gerekiyorsa silin
+            if (textBox2.Text == "şifre")
             {
-                // DateTimePicker kontrolünün seçili tarihini kullan
-                DateTime selectedDate = dateTimePicker1.Value;
-                MessageBox.Show(selectedDate.ToShortDateString());
+                textBox2.Text = "";
+                textBox2.ForeColor = Color.Black; // Yazı rengini siyah olarak ayarla
             }
-            else
+        }
+
+        private void textBox2_Leave(object sender, EventArgs e)
+        {
+            // TextBox nesnesinden çıkıldığında, eğer TextBox nesnesi boş ise varsayılan metni göster
+            if (string.IsNullOrWhiteSpace(textBox2.Text))
             {
-                // DateTimePicker kontrolü seçili değil, bir uyarı mesajı göster
-                MessageBox.Show("Lütfen bir tarih seçin.");
+                textBox2.Text = "şifre";
+                textBox2.ForeColor = Color.Gray; // Yazı rengini gri olarak ayarla
             }
+        }
+
+        private void textBox1_VisibleChanged(object sender, EventArgs e)
+        {
+            textBox1.Text = "Kimlik No";
+            textBox1.ForeColor = Color.Gray;
+        }
+
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "Kimlik No")
+            {
+                textBox1.Text = "";
+                textBox1.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            // TextBox nesnesinden çıkıldığında, eğer TextBox nesnesi boş ise varsayılan metni göster
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                textBox1.Text = "Kimlik No";
+                textBox1.ForeColor = Color.Gray; // Yazı rengini gri olarak ayarla
+            }
+        }
+
+        private void Form6_Shown(object sender, EventArgs e)
+        {
+            this.ActiveControl = null;
         }
     }
 }
