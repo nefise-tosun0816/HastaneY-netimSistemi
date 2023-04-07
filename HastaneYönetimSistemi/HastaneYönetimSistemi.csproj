@@ -217,6 +217,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Doktor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doktor.Designer.cs">
+      <DependentUpon>Doktor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -292,6 +298,9 @@
     <Compile Include="YöneticiSayfası.Designer.cs">
       <DependentUpon>YöneticiSayfası.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Doktor.resx">
+      <DependentUpon>Doktor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
