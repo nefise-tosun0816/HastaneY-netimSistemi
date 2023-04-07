@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace HastaneYönetimSistemi
 {
-    public partial class Form6 : Form
+    public partial class RandevuGirişSayfası : Form
     {
-        public Form6()
+        public RandevuGirişSayfası()
         {
             InitializeComponent();
        
@@ -23,7 +23,7 @@ namespace HastaneYönetimSistemi
             {
                 e.Cancel = true;
                 this.Hide();
-                Form5 form5 = new Form5();
+                HastaGirişSayfası form5 = new HastaGirişSayfası();
                 form5.Show();
             }
         }

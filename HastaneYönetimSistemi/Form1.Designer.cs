@@ -1,7 +1,7 @@
 ﻿
 namespace HastaneYönetimSistemi
 {
-    partial class Form1
+    partial class Anasayfa
     {
         /// <summary>
         ///Gerekli tasarımcı değişkeni.
@@ -119,15 +119,15 @@ namespace HastaneYönetimSistemi
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::HastaneYönetimSistemi.Properties.Resources.hospital;
+            this.pictureBox1.Image = global::HastaneYönetimSistemi.Properties.Resources.hastanelogo;
             this.pictureBox1.Location = new System.Drawing.Point(78, 18);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(110, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // Form1
+            // Anasayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -140,8 +140,8 @@ namespace HastaneYönetimSistemi
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Anasayfa";
+            this.Text = "Anasayfa";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

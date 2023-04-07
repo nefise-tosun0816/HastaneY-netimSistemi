@@ -1,7 +1,7 @@
 ﻿
 namespace HastaneYönetimSistemi
 {
-    partial class Form2
+    partial class YöneticiGirişSayfası
     {
         /// <summary>
         /// Required designer variable.
@@ -106,7 +106,7 @@ namespace HastaneYönetimSistemi
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // Form2
+            // YöneticiGirişSayfası
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -118,8 +118,8 @@ namespace HastaneYönetimSistemi
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
-            this.Name = "Form2";
-            this.Text = "Form2";
+            this.Name = "YöneticiGirişSayfası";
+            this.Text = "YöneticiGirişSayfası";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

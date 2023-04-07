@@ -1,7 +1,7 @@
 ﻿
 namespace HastaneYönetimSistemi
 {
-    partial class Form5
+    partial class HastaGirişSayfası
     {
         /// <summary>
         /// Required designer variable.
@@ -78,7 +78,7 @@ namespace HastaneYönetimSistemi
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // Form5
+            // HastaGirişSayfası
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -87,8 +87,8 @@ namespace HastaneYönetimSistemi
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Form5";
-            this.Text = "Form5";
+            this.Name = "HastaGirişSayfası";
+            this.Text = "HastaGirişSayfası";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

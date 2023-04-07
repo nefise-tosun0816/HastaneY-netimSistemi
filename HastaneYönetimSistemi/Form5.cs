@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace HastaneYönetimSistemi
 {
-    public partial class Form5 : Form
+    public partial class HastaGirişSayfası : Form
     {
-        public Form5()
+        public HastaGirişSayfası()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen; // yeni formu ekranın ortasında aç
@@ -24,14 +24,14 @@ namespace HastaneYönetimSistemi
             {
                 e.Cancel = true;
                 this.Hide();
-                Form1 form1 = new Form1();
+                Anasayfa form1 = new Anasayfa();
                 form1.Show();
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form6 form6 = new Form6();
+            RandevuGirişSayfası form6 = new RandevuGirişSayfası();
             form6.Show();
             this.Hide();
         }

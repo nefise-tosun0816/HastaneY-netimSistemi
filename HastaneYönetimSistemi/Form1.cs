@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace HastaneYönetimSistemi
 {
-    public partial class Form1 : Form
+    public partial class Anasayfa : Form
     {
-        public Form1()
+        public Anasayfa()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            YöneticiGirişSayfası form2 = new YöneticiGirişSayfası();
             form2.Show();
             this.Hide();
             
@@ -28,7 +28,7 @@ namespace HastaneYönetimSistemi
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
+            DoktorGirişSayfası form3 = new DoktorGirişSayfası();
             form3.Show();
             this.Hide();
             
@@ -37,14 +37,14 @@ namespace HastaneYönetimSistemi
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form4 form4 = new Form4();
+            HemşireGirişSayfası form4 = new HemşireGirişSayfası();
             form4.Show();
             this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form5 form5 = new Form5();
+            HastaGirişSayfası form5 = new HastaGirişSayfası();
             form5.Show();
             this.Hide();
         }

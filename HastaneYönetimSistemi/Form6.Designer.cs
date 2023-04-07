@@ -1,7 +1,7 @@
 ﻿
 namespace HastaneYönetimSistemi
 {
-    partial class Form6
+    partial class RandevuGirişSayfası
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace HastaneYönetimSistemi
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form6));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RandevuGirişSayfası));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -75,7 +75,7 @@ namespace HastaneYönetimSistemi
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label1.Name = "label1";
             // 
-            // Form6
+            // RandevuGirişSayfası
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -84,7 +84,7 @@ namespace HastaneYönetimSistemi
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Form6";
+            this.Name = "RandevuGirişSayfası";
             this.Shown += new System.EventHandler(this.Form6_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
