@@ -295,5 +295,10 @@ namespace HastaneYönetimSistemi
         {
             this.ActiveControl = null;
         }
+
+        private void adTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

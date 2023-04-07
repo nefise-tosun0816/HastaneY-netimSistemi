@@ -177,7 +177,10 @@
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(324, 22);
             this.richTextBox1.TabIndex = 19;
-            this.richTextBox1.Text = "Arama...";
+            this.richTextBox1.Text = "";
+            this.richTextBox1.VisibleChanged += new System.EventHandler(this.richTextBox1_VisibleChanged);
+            this.richTextBox1.Enter += new System.EventHandler(this.richTextBox1_Enter);
+            this.richTextBox1.Leave += new System.EventHandler(this.richTextBox1_Leave);
             // 
             // listBox4
             // 

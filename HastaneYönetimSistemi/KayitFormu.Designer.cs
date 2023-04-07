@@ -46,19 +46,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.soyadTextBox = new System.Windows.Forms.TextBox();
             this.adTextBox = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -278,9 +278,20 @@
             this.adTextBox.Name = "adTextBox";
             this.adTextBox.Size = new System.Drawing.Size(112, 24);
             this.adTextBox.TabIndex = 1;
+            this.adTextBox.TextChanged += new System.EventHandler(this.adTextBox_TextChanged);
             this.adTextBox.VisibleChanged += new System.EventHandler(this.adTextBox_VisibleChanged);
             this.adTextBox.Enter += new System.EventHandler(this.adTextBox_Enter);
             this.adTextBox.Leave += new System.EventHandler(this.adTextBox_Leave);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::HastaneYönetimSistemi.Properties.Resources.hastanelogo;
+            this.pictureBox1.Location = new System.Drawing.Point(51, 20);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(130, 43);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // panel3
             // 
@@ -354,16 +365,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Giriş Yap ";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::HastaneYönetimSistemi.Properties.Resources.hastanelogo;
-            this.pictureBox1.Location = new System.Drawing.Point(51, 20);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(130, 43);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // KayitFormu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -381,9 +382,9 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
