@@ -36,14 +36,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.cmbPoliklinik = new System.Windows.Forms.ComboBox();
+            this.cmbHekim = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -120,24 +120,6 @@
             this.label6.TabIndex = 7;
             this.label6.Text = "Randevu Saati:";
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(261, 148);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(217, 20);
-            this.listBox1.TabIndex = 8;
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 16;
-            this.listBox2.Location = new System.Drawing.Point(261, 195);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(217, 20);
-            this.listBox2.TabIndex = 9;
-            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -195,19 +177,36 @@
             this.dateTimePicker2.TabIndex = 16;
             this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
+            // cmbPoliklinik
+            // 
+            this.cmbPoliklinik.FormattingEnabled = true;
+            this.cmbPoliklinik.Location = new System.Drawing.Point(261, 143);
+            this.cmbPoliklinik.Name = "cmbPoliklinik";
+            this.cmbPoliklinik.Size = new System.Drawing.Size(217, 24);
+            this.cmbPoliklinik.TabIndex = 17;
+            this.cmbPoliklinik.SelectedIndexChanged += new System.EventHandler(this.cmbPoliklinik_SelectedIndexChanged);
+            // 
+            // cmbHekim
+            // 
+            this.cmbHekim.FormattingEnabled = true;
+            this.cmbHekim.Location = new System.Drawing.Point(261, 190);
+            this.cmbHekim.Name = "cmbHekim";
+            this.cmbHekim.Size = new System.Drawing.Size(217, 24);
+            this.cmbHekim.TabIndex = 18;
+            // 
             // HastaneRandevu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1094, 531);
+            this.Controls.Add(this.cmbHekim);
+            this.Controls.Add(this.cmbPoliklinik);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -218,6 +217,7 @@
             this.Controls.Add(this.label1);
             this.Name = "HastaneRandevu";
             this.Text = "HastaneRandevu";
+            this.Load += new System.EventHandler(this.HastaneRandevu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,13 +233,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.ComboBox cmbPoliklinik;
+        private System.Windows.Forms.ComboBox cmbHekim;
     }
 }

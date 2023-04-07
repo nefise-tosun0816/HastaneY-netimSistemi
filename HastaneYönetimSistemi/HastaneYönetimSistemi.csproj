@@ -278,6 +278,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandevuBilgileriSınıfı.cs" />
     <Compile Include="VeritabaniIslemleri.cs" />
     <Compile Include="YöneticiSayfası.cs">
       <SubType>Form</SubType>
