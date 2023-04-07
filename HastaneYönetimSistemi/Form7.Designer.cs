@@ -42,10 +42,10 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -167,31 +167,11 @@
             this.richTextBox1.TabIndex = 18;
             this.richTextBox1.Text = "";
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(124, 297);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(197, 17);
-            this.listBox1.TabIndex = 19;
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Items.AddRange(new object[] {
-            "Erkek",
-            "Kadın",
-            "Belirtmek istemiyorum"});
-            this.listBox2.Location = new System.Drawing.Point(124, 255);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(197, 17);
-            this.listBox2.TabIndex = 20;
-            // 
             // richTextBox2
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(378, 53);
+            this.richTextBox2.Location = new System.Drawing.Point(378, 49);
             this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(352, 20);
+            this.richTextBox2.Size = new System.Drawing.Size(352, 24);
             this.richTextBox2.TabIndex = 21;
             this.richTextBox2.Text = "Arama...";
             // 
@@ -205,15 +185,42 @@
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Erkek",
+            "Kadın",
+            "Belirtmek İstemiyorum"});
+            this.comboBox1.Location = new System.Drawing.Point(124, 255);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(197, 21);
+            this.comboBox1.TabIndex = 23;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Dahiliye",
+            "Nöroloji",
+            "Kardiyoloji",
+            "Gastroloji",
+            "Ortopedi",
+            "KBB"});
+            this.comboBox2.Location = new System.Drawing.Point(124, 297);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(197, 21);
+            this.comboBox2.TabIndex = 24;
+            // 
             // Form7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(743, 426);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.richTextBox2);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -253,9 +260,9 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.RichTextBox richTextBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
