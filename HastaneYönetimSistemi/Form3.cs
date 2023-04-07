@@ -37,5 +37,13 @@ namespace HastaneYönetimSistemi
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            Doktor Doktor = new Doktor();
+            Doktor.Show();
+            this.Hide();
+        }
     }
 }
