@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using static HastaneYönetimSistemi.HemşireSınıfı;
 namespace HastaneYönetimSistemi
 {
     public partial class Form7 : Form
@@ -17,19 +17,17 @@ namespace HastaneYönetimSistemi
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form7_Shown(object sender, EventArgs e)
         {
             this.ActiveControl = null;
+        }
+
+       
+
+        private void Form7_Load(object sender, EventArgs e)
+        {
+            cmbCinsiyet.Items.AddRange(Enum.GetNames(typeof(Cinsiyet)));
+            cmbBrans.Items.AddRange(Enum.GetNames(typeof(HBranslar)));
         }
     }
 }

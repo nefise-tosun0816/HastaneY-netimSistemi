@@ -53,6 +53,24 @@ namespace HastaneYönetimSistemi
                 cmbHekim.Items.AddRange(Enum.GetNames(typeof(ORTOPEDİ_VE_TRAVMATOLOJİ)));
         }
 
-       
+        private void button4_Click(object sender, EventArgs e)
+        {
+            foreach (Control c in Controls)
+            {
+                if (c is TextBox)
+                {
+                    ((TextBox)c).Clear(); // TextBox'ları temizle
+                }
+                else if (c is ComboBox)
+                {
+                    ((ComboBox)c).SelectedIndex = -1; // ComboBox'ları sıfırla
+                }
+                else if (c is DateTimePicker)
+                {
+                    ((DateTimePicker)c).Value = DateTime.Now; // DateTimePicker'ları sıfırla
+                }
+                
+            }
+        }
     }
 }
