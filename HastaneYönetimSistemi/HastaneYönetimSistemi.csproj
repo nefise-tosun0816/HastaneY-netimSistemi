@@ -276,6 +276,7 @@
     <Compile Include="HastaneRandevu.Designer.cs">
       <DependentUpon>HastaneRandevu.cs</DependentUpon>
     </Compile>
+    <Compile Include="HemşireSınıfı.cs" />
     <Compile Include="KayitFormu.cs">
       <SubType>Form</SubType>
     </Compile>
