@@ -35,7 +35,7 @@ namespace HastaneYönetimSistemi
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form7 form7 = new Form7();
+            Hemsire form7 = new Hemsire();
             form7.Show();
             this.Hide();
         }

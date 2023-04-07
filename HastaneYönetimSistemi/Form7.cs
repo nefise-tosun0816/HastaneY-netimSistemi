@@ -10,9 +10,9 @@ using System.Windows.Forms;
 using static HastaneYönetimSistemi.HemşireSınıfı;
 namespace HastaneYönetimSistemi
 {
-    public partial class Form7 : Form
+    public partial class Hemsire : Form
     {
-        public Form7()
+        public Hemsire()
         {
             InitializeComponent();
         }

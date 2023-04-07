@@ -34,8 +34,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cmbCinsiyet = new System.Windows.Forms.ComboBox();
+            this.cmbBrans = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.listBox5 = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -44,8 +44,8 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.listBox4 = new System.Windows.Forms.ListBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.Ad = new System.Windows.Forms.TextBox();
+            this.Soyad = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -109,22 +109,23 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "BRANŞ";
             // 
-            // comboBox2
+            // cmbCinsiyet
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(181, 162);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(196, 24);
-            this.comboBox2.TabIndex = 10;
+            this.cmbCinsiyet.FormattingEnabled = true;
+            this.cmbCinsiyet.Location = new System.Drawing.Point(181, 162);
+            this.cmbCinsiyet.Name = "cmbCinsiyet";
+            this.cmbCinsiyet.Size = new System.Drawing.Size(196, 24);
+            this.cmbCinsiyet.TabIndex = 10;
+            this.cmbCinsiyet.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
-            // comboBox3
+            // cmbBrans
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(181, 206);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(196, 24);
-            this.comboBox3.TabIndex = 11;
-            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            this.cmbBrans.FormattingEnabled = true;
+            this.cmbBrans.Location = new System.Drawing.Point(181, 206);
+            this.cmbBrans.Name = "cmbBrans";
+            this.cmbBrans.Size = new System.Drawing.Size(196, 24);
+            this.cmbBrans.TabIndex = 11;
+            this.cmbBrans.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // dateTimePicker1
             // 
@@ -194,27 +195,27 @@
             this.textBox1.Size = new System.Drawing.Size(196, 22);
             this.textBox1.TabIndex = 21;
             // 
-            // textBox2
+            // Ad
             // 
-            this.textBox2.Location = new System.Drawing.Point(181, 62);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(196, 22);
-            this.textBox2.TabIndex = 22;
+            this.Ad.Location = new System.Drawing.Point(181, 62);
+            this.Ad.Name = "Ad";
+            this.Ad.Size = new System.Drawing.Size(196, 22);
+            this.Ad.TabIndex = 22;
             // 
-            // textBox3
+            // Soyad
             // 
-            this.textBox3.Location = new System.Drawing.Point(181, 95);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(196, 22);
-            this.textBox3.TabIndex = 23;
+            this.Soyad.Location = new System.Drawing.Point(181, 95);
+            this.Soyad.Name = "Soyad";
+            this.Soyad.Size = new System.Drawing.Size(196, 22);
+            this.Soyad.TabIndex = 23;
             // 
             // Doktor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.Soyad);
+            this.Controls.Add(this.Ad);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.listBox4);
             this.Controls.Add(this.richTextBox1);
@@ -223,8 +224,8 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listBox5);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cmbBrans);
+            this.Controls.Add(this.cmbCinsiyet);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -233,6 +234,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Doktor";
             this.Text = "Doktor";
+            this.Load += new System.EventHandler(this.Doktor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,8 +248,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cmbCinsiyet;
+        private System.Windows.Forms.ComboBox cmbBrans;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ListBox listBox5;
         private System.Windows.Forms.Button button1;
@@ -256,7 +258,7 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.ListBox listBox4;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox Ad;
+        private System.Windows.Forms.TextBox Soyad;
     }
 }

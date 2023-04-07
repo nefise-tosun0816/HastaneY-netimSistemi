@@ -41,7 +41,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.cmbPoliklinik = new System.Windows.Forms.ComboBox();
             this.cmbHekim = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
@@ -169,15 +168,6 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker2.Location = new System.Drawing.Point(261, 300);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker2.TabIndex = 16;
-            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
-            // 
             // cmbPoliklinik
             // 
             this.cmbPoliklinik.FormattingEnabled = true;
@@ -202,7 +192,6 @@
             this.ClientSize = new System.Drawing.Size(1094, 531);
             this.Controls.Add(this.cmbHekim);
             this.Controls.Add(this.cmbPoliklinik);
-            this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -239,7 +228,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.ComboBox cmbPoliklinik;
         private System.Windows.Forms.ComboBox cmbHekim;
     }

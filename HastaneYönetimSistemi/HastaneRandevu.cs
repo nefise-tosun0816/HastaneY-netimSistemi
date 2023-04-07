@@ -20,12 +20,7 @@ namespace HastaneYönetimSistemi
             InitializeComponent();
         }
 
-        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
-        {
-            dateTimePicker2.Format = DateTimePickerFormat.Time;
-            dateTimePicker2.ShowUpDown = true;
-            TimeSpan selectedTime = dateTimePicker2.Value.TimeOfDay;
-        }
+       
         private void HastaneRandevu_Load(object sender, EventArgs e)
         {
             cmbPoliklinik.Items.AddRange(Enum.GetNames(typeof(Poliklinik)));

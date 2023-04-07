@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static HastaneYönetimSistemi.DoktorSınıfı;
 
 namespace HastaneYönetimSistemi
 {
@@ -30,6 +31,17 @@ namespace HastaneYönetimSistemi
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Doktor_Load(object sender, EventArgs e)
+        {
+            cmbCinsiyet.Items.AddRange(Enum.GetNames(typeof(Cinsiyet)));
+            cmbBrans.Items.AddRange(Enum.GetNames(typeof(Branslar)));
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace HastaneYönetimSistemi
 {
-    partial class Form7
+    partial class Hemsire
     {
         /// <summary>
         /// Required designer variable.
@@ -216,7 +216,7 @@
             this.cmbBrans.Size = new System.Drawing.Size(261, 24);
             this.cmbBrans.TabIndex = 26;
             // 
-            // Form7
+            // Hemsire
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -240,8 +240,8 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Form7";
-            this.Text = "Form7";
+            this.Name = "Hemsire";
+            this.Text = "Hemsire";
             this.Load += new System.EventHandler(this.Form7_Load);
             this.Shown += new System.EventHandler(this.Form7_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

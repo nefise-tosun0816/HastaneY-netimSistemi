@@ -217,12 +217,14 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Context.cs" />
     <Compile Include="Doktor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Doktor.Designer.cs">
       <DependentUpon>Doktor.cs</DependentUpon>
     </Compile>
+    <Compile Include="DoktorSınıfı.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
