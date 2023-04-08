@@ -18,10 +18,7 @@ namespace HastaneYönetimSistemi
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -74,6 +71,21 @@ namespace HastaneYönetimSistemi
             DoktorGirişSayfası form2 = new DoktorGirişSayfası();
             form2.Show();
             this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            listBox4.Items.Add("Kullanıcı sisteme başarıyla eklendi");
+
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            listBox4.Items.Add("Kullanıcı sistemden silindi");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            listBox4.Items.Add("Kullanıcı güncellendi");
         }
     }
 }
