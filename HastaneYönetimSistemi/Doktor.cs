@@ -68,5 +68,12 @@ namespace HastaneYönetimSistemi
                 richTextBox1.ForeColor = Color.Gray; // Yazı rengini gri olarak ayarla
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            DoktorGirişSayfası form2 = new DoktorGirişSayfası();
+            form2.Show();
+            this.Hide();
+        }
     }
 }

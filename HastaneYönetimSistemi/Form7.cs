@@ -29,5 +29,13 @@ namespace HastaneYönetimSistemi
             cmbCinsiyet.Items.AddRange(Enum.GetNames(typeof(Cinsiyet)));
             cmbBrans.Items.AddRange(Enum.GetNames(typeof(HBranslar)));
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            
+            HemşireGirişSayfası form7 = new HemşireGirişSayfası();
+            form7.Show();
+            this.Hide();
+        }
     }
 }

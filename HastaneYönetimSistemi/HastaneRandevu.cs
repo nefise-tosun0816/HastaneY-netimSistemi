@@ -67,5 +67,12 @@ namespace HastaneYönetimSistemi
                 
             }
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            RandevuGirişSayfası form2 = new RandevuGirişSayfası();
+            form2.Show();
+            this.Hide();
+        }
     }
 }

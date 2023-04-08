@@ -91,5 +91,12 @@ namespace HastaneYönetimSistemi
         {
             this.ActiveControl = null;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            HastaGirişSayfası form2 = new HastaGirişSayfası();
+            form2.Show();
+            this.Hide();
+        }
     }
 }
