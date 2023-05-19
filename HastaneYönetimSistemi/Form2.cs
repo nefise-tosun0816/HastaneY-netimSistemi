@@ -39,5 +39,18 @@ namespace HastaneYönetimSistemi
             form2.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            YöneticiAnaSayfa yöneticiAnaSayfa = new YöneticiAnaSayfa();
+            yöneticiAnaSayfa.Show();
+            this.Hide();
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

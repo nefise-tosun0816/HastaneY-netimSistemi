@@ -68,8 +68,8 @@ namespace HastaneYönetimSistemi
 
         private void button4_Click(object sender, EventArgs e)
         {
-            DoktorGirişSayfası form2 = new DoktorGirişSayfası();
-            form2.Show();
+            PersonelKayıt personelKayıt = new PersonelKayıt();
+            personelKayıt.Show();
             this.Hide();
         }
 

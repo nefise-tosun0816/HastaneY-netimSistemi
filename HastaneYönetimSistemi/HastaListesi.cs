@@ -21,6 +21,13 @@ namespace HastaneYönetimSistemi
         {
             
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            YöneticiAnaSayfa form1= new YöneticiAnaSayfa();
+            form1.Show();
+            this.Hide();
+        }
     } 
 }
 

@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
 namespace HastaneYönetimSistemi
 {
     public partial class KayitFormu : Form
@@ -101,22 +100,56 @@ namespace HastaneYönetimSistemi
         }
         private void kayitOlButton_Click(object sender, EventArgs e)
         {
-            // SqlConnection nesnesi açılır
-            connection.Open();
+            User user = new User
+            {
+                Ad = adTextBox.Text,
+                Soyad = soyadTextBox.Text,
+                Email = txtEmail.Text,
+                TCKimlikNo = textBoxTCKimlik.Text,
+                Parola = sifreTextBox.Text
+            };
 
-            // SqlCommand nesnesi oluşturulur ve parametreleri atanır
-            SqlCommand command = new SqlCommand("INSERT INTO Users (FirstName, LastName, Email, Tc, Password) VALUES (@FirstName, @LastName, @Email, @Tc, @Password)", connection);
-            command.Parameters.AddWithValue("@FirstName", adTextBox.Text);
-            command.Parameters.AddWithValue("@LastName", soyadTextBox.Text);
-            command.Parameters.AddWithValue("@Email", txtEmail.Text);
-            command.Parameters.AddWithValue("@Tc", textBoxTCKimlik.Text);
-            command.Parameters.AddWithValue("@Password", sifreTextBox.Text);
+            UserValidator validator = new UserValidator();
+            var validationResult = validator.Validate(user);
 
-            // SqlCommand nesnesi çalıştırılır
-            command.ExecuteNonQuery();
+            if (validationResult.IsValid)
+            {
+                // Veritabanı bağlantısı ve kullanıcıyı kaydetme işlemleri
+                try
+                {
+                    // Veritabanı bağlantısı ve kaydetme işlemleri
 
-            // Kullanıcıya mesaj gösterilir
-            MessageBox.Show("Üyelik oluşturuldu.", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    using (var connection = new SqlConnection("connectionString"))
+                    {
+                        connection.Open();
+
+                        // Kullanıcıyı veritabanına ekleme işlemi
+
+                        SqlCommand command = new SqlCommand("INSERT INTO Users (FirstName, LastName, Email, Tc, Password) VALUES (@FirstName, @LastName, @Email, @Tc, @Password)", connection);
+                        {
+
+                            command.Parameters.AddWithValue("@FirstName", adTextBox.Text);
+                            command.Parameters.AddWithValue("@LastName", soyadTextBox.Text);
+                            command.Parameters.AddWithValue("@Email", txtEmail.Text);
+                            command.Parameters.AddWithValue("@Tc", textBoxTCKimlik.Text);
+                            command.Parameters.AddWithValue("@Password", sifreTextBox.Text);
+                            command.ExecuteNonQuery();
+                        }
+
+                        MessageBox.Show("Üyelik oluşturuldu.", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Kullanıcı kaydetme işlemi sırasında bir hata oluştu: " + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                string errors = string.Join(Environment.NewLine, validationResult.Errors.Select(x => x.ErrorMessage));
+                MessageBox.Show(errors, "Doğrulama Hataları", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         
 
@@ -299,6 +332,13 @@ namespace HastaneYönetimSistemi
         private void adTextBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            HastaGirişSayfası hastaGirişSayfası = new HastaGirişSayfası();
+            hastaGirişSayfası.Show();
+            this.Hide();    
         }
     }
 }

@@ -47,6 +47,8 @@
             this.Ad = new System.Windows.Forms.TextBox();
             this.Soyad = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -84,7 +86,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(20, 122);
+            this.label4.Location = new System.Drawing.Point(20, 168);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(109, 17);
             this.label4.TabIndex = 3;
@@ -94,7 +96,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(20, 160);
+            this.label5.Location = new System.Drawing.Point(25, 215);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 17);
             this.label5.TabIndex = 4;
@@ -104,7 +106,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(20, 204);
+            this.label6.Location = new System.Drawing.Point(25, 259);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 17);
             this.label6.TabIndex = 5;
@@ -113,7 +115,7 @@
             // cmbCinsiyet
             // 
             this.cmbCinsiyet.FormattingEnabled = true;
-            this.cmbCinsiyet.Location = new System.Drawing.Point(175, 154);
+            this.cmbCinsiyet.Location = new System.Drawing.Point(175, 208);
             this.cmbCinsiyet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbCinsiyet.Name = "cmbCinsiyet";
             this.cmbCinsiyet.Size = new System.Drawing.Size(196, 24);
@@ -123,7 +125,7 @@
             // cmbBrans
             // 
             this.cmbBrans.FormattingEnabled = true;
-            this.cmbBrans.Location = new System.Drawing.Point(175, 197);
+            this.cmbBrans.Location = new System.Drawing.Point(175, 252);
             this.cmbBrans.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbBrans.Name = "cmbBrans";
             this.cmbBrans.Size = new System.Drawing.Size(196, 24);
@@ -132,7 +134,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(175, 117);
+            this.dateTimePicker1.Location = new System.Drawing.Point(175, 163);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(196, 22);
@@ -150,7 +152,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(28, 256);
+            this.button1.Location = new System.Drawing.Point(23, 292);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(88, 23);
@@ -161,7 +163,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(152, 256);
+            this.button2.Location = new System.Drawing.Point(154, 292);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(88, 23);
@@ -172,7 +174,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(271, 256);
+            this.button3.Location = new System.Drawing.Point(271, 292);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 23);
@@ -197,7 +199,7 @@
             // 
             this.listBox4.FormattingEnabled = true;
             this.listBox4.ItemHeight = 16;
-            this.listBox4.Location = new System.Drawing.Point(28, 293);
+            this.listBox4.Location = new System.Drawing.Point(23, 319);
             this.listBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBox4.Name = "listBox4";
             this.listBox4.Size = new System.Drawing.Size(343, 132);
@@ -221,7 +223,7 @@
             // 
             // Soyad
             // 
-            this.Soyad.Location = new System.Drawing.Point(175, 86);
+            this.Soyad.Location = new System.Drawing.Point(175, 84);
             this.Soyad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Soyad.Name = "Soyad";
             this.Soyad.Size = new System.Drawing.Size(196, 22);
@@ -229,20 +231,41 @@
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.LightGray;
             this.button4.Location = new System.Drawing.Point(624, 21);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(124, 39);
             this.button4.TabIndex = 24;
             this.button4.Text = "Çıkış";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(175, 117);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(196, 22);
+            this.textBox4.TabIndex = 29;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.Location = new System.Drawing.Point(20, 122);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(103, 17);
+            this.label7.TabIndex = 30;
+            this.label7.Text = "KULLANICI ADI";
             // 
             // Doktor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(768, 452);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.Soyad);
             this.Controls.Add(this.Ad);
@@ -292,5 +315,7 @@
         private System.Windows.Forms.TextBox Ad;
         private System.Windows.Forms.TextBox Soyad;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label7;
     }
 }

@@ -46,8 +46,8 @@ namespace HastaneYönetimSistemi
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Anasayfa form2 = new Anasayfa();
-            form2.Show();
+            Anasayfa form1 = new Anasayfa();
+            form1.Show();
             this.Hide();
         }
     }
