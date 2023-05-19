@@ -39,6 +39,9 @@
     <Reference Include="Costura, Version=3.3.3.0, Culture=neutral, PublicKeyToken=9919ef960d84173d, processorArchitecture=MSIL">
       <HintPath>..\packages\Costura.Fody.3.3.3\lib\net40\Costura.dll</HintPath>
     </Reference>
+    <Reference Include="FluentValidation, Version=11.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.11.5.2\lib\netstandard2.0\FluentValidation.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Win32.Registry, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Win32.Registry.5.0.0\lib\net461\Microsoft.Win32.Registry.dll</HintPath>
     </Reference>
@@ -198,6 +201,9 @@
     <Reference Include="System.Threading.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Threading.AccessControl.6.0.0\lib\net461\System.Threading.AccessControl.dll</HintPath>
     </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="System.Transactions" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
@@ -223,6 +229,12 @@
     </Compile>
     <Compile Include="Doktor.Designer.cs">
       <DependentUpon>Doktor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoktorAnaSayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoktorAnaSayfa.Designer.cs">
+      <DependentUpon>DoktorAnaSayfa.cs</DependentUpon>
     </Compile>
     <Compile Include="DoktorSınıfı.cs" />
     <Compile Include="Form1.cs">
@@ -284,6 +296,12 @@
     <Compile Include="HastaneRandevu.Designer.cs">
       <DependentUpon>HastaneRandevu.cs</DependentUpon>
     </Compile>
+    <Compile Include="HemşireAnaSayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HemşireAnaSayfa.Designer.cs">
+      <DependentUpon>HemşireAnaSayfa.cs</DependentUpon>
+    </Compile>
     <Compile Include="HemşireSınıfı.cs" />
     <Compile Include="KayitFormu.cs">
       <SubType>Form</SubType>
@@ -291,10 +309,24 @@
     <Compile Include="KayitFormu.Designer.cs">
       <DependentUpon>KayitFormu.cs</DependentUpon>
     </Compile>
+    <Compile Include="PersonelKayıt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelKayıt.Designer.cs">
+      <DependentUpon>PersonelKayıt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RandevuBilgileriSınıfı.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="UserValidator.cs" />
     <Compile Include="VeritabaniIslemleri.cs" />
+    <Compile Include="YöneticiAnaSayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YöneticiAnaSayfa.Designer.cs">
+      <DependentUpon>YöneticiAnaSayfa.cs</DependentUpon>
+    </Compile>
     <Compile Include="YöneticiSayfası.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -303,6 +335,9 @@
     </Compile>
     <EmbeddedResource Include="Doktor.resx">
       <DependentUpon>Doktor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoktorAnaSayfa.resx">
+      <DependentUpon>DoktorAnaSayfa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -331,8 +366,14 @@
     <EmbeddedResource Include="HastaneRandevu.resx">
       <DependentUpon>HastaneRandevu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HemşireAnaSayfa.resx">
+      <DependentUpon>HemşireAnaSayfa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KayitFormu.resx">
       <DependentUpon>KayitFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelKayıt.resx">
+      <DependentUpon>PersonelKayıt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -344,6 +385,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="YöneticiAnaSayfa.resx">
+      <DependentUpon>YöneticiAnaSayfa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="YöneticiSayfası.resx">
       <DependentUpon>YöneticiSayfası.cs</DependentUpon>
     </EmbeddedResource>

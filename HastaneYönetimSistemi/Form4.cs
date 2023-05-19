@@ -35,9 +35,10 @@ namespace HastaneYönetimSistemi
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Hemsire form7 = new Hemsire();
-            form7.Show();
+            HemşireAnaSayfa hemşireAnaSayfa = new HemşireAnaSayfa();
+            hemşireAnaSayfa.Show();
             this.Hide();
+
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -47,8 +48,8 @@ namespace HastaneYönetimSistemi
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Anasayfa form2 = new Anasayfa();
-            form2.Show();
+            Anasayfa form1 = new Anasayfa();
+            form1.Show();
             this.Hide();
         }
     }

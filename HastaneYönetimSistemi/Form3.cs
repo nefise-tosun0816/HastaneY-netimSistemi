@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace HastaneYönetimSistemi
 {
@@ -37,20 +38,27 @@ namespace HastaneYönetimSistemi
         {
 
         }
+        //DoktorKullanıcıGirişiSınıfı DKG = new DoktorKullanıcıGirişiSınıfı();
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            Doktor Doktor = new Doktor();
-            Doktor.Show();
+           // DKG.DoktorKullanıcı(txtKullanıcıAdı,txtŞifre);
+           DoktorAnaSayfa doktorAnaSayfa = new DoktorAnaSayfa();
+            doktorAnaSayfa.Show();
             this.Hide();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Anasayfa form2 = new Anasayfa();
-            form2.Show();
+            Anasayfa form1 = new Anasayfa();
+            form1.Show();
             this.Hide();
+        }
+
+        private void DoktorGirişSayfası_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
