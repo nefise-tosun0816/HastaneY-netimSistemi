@@ -39,5 +39,12 @@ namespace HastaneYönetimSistemi
             hastaListesi.Show();
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            HastaBilgileri hastagiriş = new HastaBilgileri();
+            hastagiriş.Show();
+            this.Hide();
+        }
     }
 }
