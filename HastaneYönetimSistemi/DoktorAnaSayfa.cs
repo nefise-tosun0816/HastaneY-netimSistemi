@@ -24,9 +24,11 @@ namespace HastaneYönetimSistemi
             this.Hide();    
         }
 
-        private void DoktorAnaSayfa_Load(object sender, EventArgs e)
+        private void button6_Click(object sender, EventArgs e)
         {
-
+           DoktorGirişSayfası doktorGiriş = new DoktorGirişSayfası();
+            doktorGiriş.Show();
+            this.Hide();
         }
     }
 }

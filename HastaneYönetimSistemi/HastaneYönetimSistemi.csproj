@@ -279,6 +279,12 @@
     <Compile Include="Form7.Designer.cs">
       <DependentUpon>Form7.cs</DependentUpon>
     </Compile>
+    <Compile Include="HastaBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HastaBilgileri.Designer.cs">
+      <DependentUpon>HastaBilgileri.cs</DependentUpon>
+    </Compile>
     <Compile Include="HastaKayıtDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -360,6 +366,9 @@
     <EmbeddedResource Include="Form7.resx">
       <DependentUpon>Form7.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HastaBilgileri.resx">
+      <DependentUpon>HastaBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HastaListesi.resx">
       <DependentUpon>HastaListesi.cs</DependentUpon>
     </EmbeddedResource>
@@ -433,6 +442,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\hastanelogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reçete.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tahliller.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hastalıklar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rapor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aşı.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aşı2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ilaç.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('..\packages\Fody.4.0.2\build\Fody.targets')" />

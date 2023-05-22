@@ -144,7 +144,7 @@
             // 
             this.listBox5.FormattingEnabled = true;
             this.listBox5.ItemHeight = 16;
-            this.listBox5.Location = new System.Drawing.Point(423, 117);
+            this.listBox5.Location = new System.Drawing.Point(423, 57);
             this.listBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBox5.Name = "listBox5";
             this.listBox5.Size = new System.Drawing.Size(324, 308);
@@ -185,7 +185,7 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(423, 84);
+            this.richTextBox1.Location = new System.Drawing.Point(423, 22);
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(324, 22);
@@ -232,7 +232,7 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.LightGray;
-            this.button4.Location = new System.Drawing.Point(624, 21);
+            this.button4.Location = new System.Drawing.Point(631, 400);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(124, 39);
