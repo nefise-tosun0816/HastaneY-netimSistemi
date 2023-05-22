@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.hastaKayıtDataSet = new HastaneYönetimSistemi.HastaKayıtDataSet();
             this.hastaKayıtDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hastaKayıtDataSet = new HastaneYönetimSistemi.HastaKayıtDataSet();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hastaKayıtDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hastaKayıtDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hastaKayıtDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -49,27 +49,27 @@
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 0;
             // 
-            // hastaKayıtDataSet
-            // 
-            this.hastaKayıtDataSet.DataSetName = "HastaKayıtDataSet";
-            this.hastaKayıtDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // hastaKayıtDataSetBindingSource
             // 
             this.hastaKayıtDataSetBindingSource.DataSource = this.hastaKayıtDataSet;
             this.hastaKayıtDataSetBindingSource.Position = 0;
             // 
+            // hastaKayıtDataSet
+            // 
+            this.hastaKayıtDataSet.DataSetName = "HastaKayıtDataSet";
+            this.hastaKayıtDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // YöneticiSayfası
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(957, 551);
+            this.ClientSize = new System.Drawing.Size(988, 569);
             this.Controls.Add(this.dataGridView1);
             this.Name = "YöneticiSayfası";
             this.Text = "YöneticiSayfası";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hastaKayıtDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hastaKayıtDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hastaKayıtDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
