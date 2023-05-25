@@ -190,7 +190,7 @@
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(324, 22);
             this.richTextBox1.TabIndex = 19;
-            this.richTextBox1.Text = "";
+            this.richTextBox1.Text = "*****";
             this.richTextBox1.VisibleChanged += new System.EventHandler(this.richTextBox1_VisibleChanged);
             this.richTextBox1.Enter += new System.EventHandler(this.richTextBox1_Enter);
             this.richTextBox1.Leave += new System.EventHandler(this.richTextBox1_Leave);
@@ -287,7 +287,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Doktor";
-            this.Text = "Doktor";
+            this.Text = "********************";
             this.Load += new System.EventHandler(this.Doktor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
