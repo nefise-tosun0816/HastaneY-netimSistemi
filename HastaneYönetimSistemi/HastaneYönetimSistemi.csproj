@@ -296,6 +296,31 @@
     <Compile Include="HastaListesi.Designer.cs">
       <DependentUpon>HastaListesi.cs</DependentUpon>
     </Compile>
+    <Compile Include="HastaneDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HastaneDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HastaneDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HastaneDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HastaneDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HastaneDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HastaneDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HastaneDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HastaneDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HastaneDataSet4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="HastaneRandevu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -410,6 +435,61 @@
     </None>
     <None Include="HastaKayıtDataSet.xss">
       <DependentUpon>HastaKayıtDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneDataSet.xsc">
+      <DependentUpon>HastaneDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HastaneDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HastaneDataSet.xss">
+      <DependentUpon>HastaneDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneDataSet1.xsc">
+      <DependentUpon>HastaneDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HastaneDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HastaneDataSet1.xss">
+      <DependentUpon>HastaneDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneDataSet2.xsc">
+      <DependentUpon>HastaneDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HastaneDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HastaneDataSet2.xss">
+      <DependentUpon>HastaneDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneDataSet3.xsc">
+      <DependentUpon>HastaneDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HastaneDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HastaneDataSet3.xss">
+      <DependentUpon>HastaneDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneDataSet4.xsc">
+      <DependentUpon>HastaneDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HastaneDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HastaneDataSet4.xss">
+      <DependentUpon>HastaneDataSet4.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 using static HastaneYönetimSistemi.DoktorSınıfı;
 
 namespace HastaneYönetimSistemi
@@ -18,7 +19,9 @@ namespace HastaneYönetimSistemi
             InitializeComponent();
         }
 
-        
+        SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-9F720B0;Integrated Security=True;Connect Timeout=30;Encrypt=False");
+
+
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -37,6 +40,9 @@ namespace HastaneYönetimSistemi
 
         private void Doktor_Load(object sender, EventArgs e)
         {
+            // TODO: Bu kod satırı 'hastaneDataSet3.Doktorlar' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            this.doktorlarTableAdapter.Fill(this.hastaneDataSet3.Doktorlar);
+           
             cmbCinsiyet.Items.AddRange(Enum.GetNames(typeof(Cinsiyet)));
             cmbBrans.Items.AddRange(Enum.GetNames(typeof(Branslar)));
         }
@@ -86,6 +92,30 @@ namespace HastaneYönetimSistemi
         private void button3_Click(object sender, EventArgs e)
         {
             listBox4.Items.Add("Kullanıcı güncellendi");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            MessageBox.Show("Baglantı kuruldu");
+        }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.doktorTableAdapter.FillBy(this.hastaneDataSet.Doktor);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void fillByToolStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }
