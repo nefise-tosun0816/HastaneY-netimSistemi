@@ -26,7 +26,7 @@ namespace HastaneYönetimSistemi
 
         private void Form7_Load(object sender, EventArgs e)
         {
-            // TODO: yarBu kod satırı 'hastaneDataSet4.Hemşire' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            // TODO: yadrBu kod satırı 'hastaneDataSet4.Hemşire' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
             this.hemşireTableAdapter.Fill(this.hastaneDataSet4.Hemşire);
             cmbCinsiyet.Items.AddRange(Enum.GetNames(typeof(Cinsiyet)));
             cmbBrans.Items.AddRange(Enum.GetNames(typeof(HBranslar)));
