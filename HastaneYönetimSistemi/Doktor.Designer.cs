@@ -87,6 +87,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.Location = new System.Drawing.Point(20, 168);
+            this.label4.Location = new System.Drawing.Point(20, 167);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(109, 17);
             this.label4.TabIndex = 3;
@@ -107,6 +108,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.Location = new System.Drawing.Point(25, 259);
+            this.label6.Location = new System.Drawing.Point(25, 258);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 17);
             this.label6.TabIndex = 5;
@@ -136,6 +138,8 @@
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(175, 163);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateTimePicker1.Location = new System.Drawing.Point(175, 162);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(196, 22);
             this.dateTimePicker1.TabIndex = 12;
@@ -164,6 +168,8 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(154, 292);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Location = new System.Drawing.Point(155, 292);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(88, 23);
@@ -234,10 +240,12 @@
             this.button4.BackColor = System.Drawing.Color.LightGray;
             this.button4.Location = new System.Drawing.Point(631, 400);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Location = new System.Drawing.Point(644, 424);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(124, 39);
             this.button4.TabIndex = 24;
-            this.button4.Text = "Çıkış";
+            this.button4.Text = "Geri";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -245,6 +253,8 @@
             // 
             this.textBox4.Location = new System.Drawing.Point(175, 117);
             this.textBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox4.Location = new System.Drawing.Point(175, 117);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(196, 22);
             this.textBox4.TabIndex = 29;
@@ -264,6 +274,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(768, 452);
+            this.ClientSize = new System.Drawing.Size(781, 476);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.button4);

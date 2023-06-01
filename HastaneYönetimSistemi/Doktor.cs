@@ -68,8 +68,8 @@ namespace HastaneYönetimSistemi
 
         private void button4_Click(object sender, EventArgs e)
         {
-            PersonelKayıt personelKayıt = new PersonelKayıt();
-            personelKayıt.Show();
+            YöneticiAnaSayfa anaSayfa = new YöneticiAnaSayfa();
+            anaSayfa.Show();
             this.Hide();
         }
 

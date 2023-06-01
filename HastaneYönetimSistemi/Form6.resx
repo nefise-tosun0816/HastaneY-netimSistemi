@@ -271,7 +271,7 @@
     <value>NoControl</value>
   </data>
   <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>886, 4</value>
+    <value>860, 495</value>
   </data>
   <data name="button2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -283,7 +283,7 @@
     <value>7</value>
   </data>
   <data name="button2.Text" xml:space="preserve">
-    <value>Hasta Girişi</value>
+    <value>Geri</value>
   </data>
   <data name="&gt;&gt;button2.Name" xml:space="preserve">
     <value>button2</value>

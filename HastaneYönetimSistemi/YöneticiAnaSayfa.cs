@@ -16,34 +16,81 @@ namespace HastaneYönetimSistemi
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void FormGetir(Form frm)
         {
-            PersonelKayıt personelKayıt= new PersonelKayıt();
-            personelKayıt.Show();
-            this.Hide();
 
-
+            frm.MdiParent = this;
+            frm.FormBorderStyle = FormBorderStyle.None;
+       
+            frm.Show();
         }
-
+        
         private void button5_Click(object sender, EventArgs e)
         {
             YöneticiGirişSayfası form2 = new YöneticiGirişSayfası();
             form2.Show();
-            this.Hide();
+            this.Close();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        
+
+        
+
+        private void button4_Click(object sender, EventArgs e)
         {
-            HastaListesi hastaListesi = new HastaListesi();
-            hastaListesi.Show();
+
+        }
+
+        private void YöneticiAnaSayfa_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button9_MouseEnter(object sender, EventArgs e)
+        {
+            button9.FlatAppearance.BorderColor = Color.Red;
+        }
+
+        private void button8_MouseEnter(object sender, EventArgs e)
+        {
+            button8.FlatAppearance.BorderColor = Color.Red;
+        }
+
+        private void button9_MouseLeave(object sender, EventArgs e)
+        {
+           button9.FlatAppearance.BorderColor = Color.Blue;
+        }
+
+        private void button8_MouseLeave(object sender, EventArgs e)
+        {
+            button8.FlatAppearance.BorderColor = Color.Blue;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            YöneticiGirişSayfası ygs = new YöneticiGirişSayfası();
+            ygs.Show();
             this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            HastaBilgileri hastagiriş = new HastaBilgileri();
-            hastagiriş.Show();
+            YöneticiGirişSayfası ygs = new YöneticiGirişSayfası();
+            ygs.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            YöneticiGirişSayfası ygs = new YöneticiGirişSayfası();
+            ygs.Show();
+            this.Hide();
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            YöneticiGirişSayfası ygs = new YöneticiGirişSayfası();
+            ygs.Show();
             this.Hide();
         }
     }

@@ -49,7 +49,13 @@
             this.button4 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.hastaneDataSet4 = new HastaneYönetimSistemi.HastaneDataSet4();
+            this.hemşireBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hemşireTableAdapter = new HastaneYönetimSistemi.HastaneDataSet4TableAdapters.HemşireTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hastaneDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hemşireBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -62,8 +68,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(165, 152);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox2.Location = new System.Drawing.Point(124, 124);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(261, 22);
             this.textBox2.TabIndex = 1;
@@ -119,8 +124,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(49, 333);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(37, 271);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 16);
             this.label5.TabIndex = 9;
@@ -185,8 +189,7 @@
             // 
             // richTextBox2
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(504, 60);
-            this.richTextBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.richTextBox2.Location = new System.Drawing.Point(378, 49);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.Size = new System.Drawing.Size(468, 29);
             this.richTextBox2.TabIndex = 21;
@@ -215,8 +218,8 @@
             // cmbBrans
             // 
             this.cmbBrans.FormattingEnabled = true;
-            this.cmbBrans.Location = new System.Drawing.Point(165, 376);
-            this.cmbBrans.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbBrans.Location = new System.Drawing.Point(124, 306);
+            this.cmbBrans.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbBrans.Name = "cmbBrans";
             this.cmbBrans.Size = new System.Drawing.Size(261, 24);
             this.cmbBrans.TabIndex = 26;
@@ -224,12 +227,11 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.LightGray;
-            this.button4.Location = new System.Drawing.Point(875, 15);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Location = new System.Drawing.Point(656, 12);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(100, 28);
             this.button4.TabIndex = 27;
-            this.button4.Text = "Çıkış";
+            this.button4.Text = "Geri";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -251,11 +253,36 @@
             this.label7.TabIndex = 29;
             this.label7.Text = "Kullanıcı Adı";
             // 
+            // listBox1
+            // 
+            this.listBox1.DataSource = this.hemşireBindingSource;
+            this.listBox1.DisplayMember = "Ad Soyad";
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(378, 88);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(352, 316);
+            this.listBox1.TabIndex = 30;
+            // 
+            // hastaneDataSet4
+            // 
+            this.hastaneDataSet4.DataSetName = "HastaneDataSet4";
+            this.hastaneDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // hemşireBindingSource
+            // 
+            this.hemşireBindingSource.DataMember = "Hemşire";
+            this.hemşireBindingSource.DataSource = this.hastaneDataSet4;
+            // 
+            // hemşireTableAdapter
+            // 
+            this.hemşireTableAdapter.ClearBeforeFill = true;
+            // 
             // Hemsire
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(991, 524);
+            this.ClientSize = new System.Drawing.Size(743, 426);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.button4);
@@ -283,6 +310,8 @@
             this.Load += new System.EventHandler(this.Form7_Load);
             this.Shown += new System.EventHandler(this.Form7_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hastaneDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hemşireBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

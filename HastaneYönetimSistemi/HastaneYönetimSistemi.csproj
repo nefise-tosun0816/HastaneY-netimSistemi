@@ -279,12 +279,6 @@
     <Compile Include="Form7.Designer.cs">
       <DependentUpon>Form7.cs</DependentUpon>
     </Compile>
-    <Compile Include="HastaBilgileri.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HastaBilgileri.Designer.cs">
-      <DependentUpon>HastaBilgileri.cs</DependentUpon>
-    </Compile>
     <Compile Include="HastaKayıtDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -295,6 +289,31 @@
     </Compile>
     <Compile Include="HastaListesi.Designer.cs">
       <DependentUpon>HastaListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HastaneDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HastaneDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HastaneDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HastaneDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HastaneDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HastaneDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HastaneDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HastaneDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HastaneDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HastaneDataSet4.xsd</DependentUpon>
     </Compile>
     <Compile Include="HastaneRandevu.cs">
       <SubType>Form</SubType>
@@ -314,12 +333,6 @@
     </Compile>
     <Compile Include="KayitFormu.Designer.cs">
       <DependentUpon>KayitFormu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PersonelKayıt.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PersonelKayıt.Designer.cs">
-      <DependentUpon>PersonelKayıt.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -366,12 +379,6 @@
     <EmbeddedResource Include="Form7.resx">
       <DependentUpon>Form7.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HastaBilgileri.resx">
-      <DependentUpon>HastaBilgileri.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HastaListesi.resx">
-      <DependentUpon>HastaListesi.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="HastaneRandevu.resx">
       <DependentUpon>HastaneRandevu.cs</DependentUpon>
     </EmbeddedResource>
@@ -380,9 +387,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KayitFormu.resx">
       <DependentUpon>KayitFormu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PersonelKayıt.resx">
-      <DependentUpon>PersonelKayıt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -57,7 +57,7 @@
             this.button1.BackColor = System.Drawing.Color.LightGray;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.Location = new System.Drawing.Point(1084, 669);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(121, 50);
             this.button1.TabIndex = 0;
@@ -69,7 +69,7 @@
             // 
             this.txtIsim.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtIsim.Location = new System.Drawing.Point(105, 38);
-            this.txtIsim.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIsim.Margin = new System.Windows.Forms.Padding(4);
             this.txtIsim.Name = "txtIsim";
             this.txtIsim.Size = new System.Drawing.Size(160, 28);
             this.txtIsim.TabIndex = 1;
@@ -78,7 +78,7 @@
             // 
             this.txtSoyisim.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtSoyisim.Location = new System.Drawing.Point(262, 38);
-            this.txtSoyisim.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSoyisim.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoyisim.Name = "txtSoyisim";
             this.txtSoyisim.Size = new System.Drawing.Size(160, 28);
             this.txtSoyisim.TabIndex = 2;
@@ -87,7 +87,7 @@
             // 
             this.txtUnvan.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtUnvan.Location = new System.Drawing.Point(105, 77);
-            this.txtUnvan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUnvan.Margin = new System.Windows.Forms.Padding(4);
             this.txtUnvan.Name = "txtUnvan";
             this.txtUnvan.Size = new System.Drawing.Size(318, 28);
             this.txtUnvan.TabIndex = 3;
@@ -244,7 +244,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(124, 39);
             this.button6.TabIndex = 25;
-            this.button6.Text = "Çıkış";
+            this.button6.Text = "Geri";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -294,7 +294,7 @@
             this.Controls.Add(this.txtIsim);
             this.Controls.Add(this.button1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DoktorAnaSayfa";
             this.Text = "DoktorAnaSayfa";
             this.ResumeLayout(false);
