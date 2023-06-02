@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static HastaneYönetimSistemi.RandevuBilgileriSınıfı;
-
+using System.Data.SqlClient;
 
 namespace HastaneYönetimSistemi
 {
@@ -20,7 +20,9 @@ namespace HastaneYönetimSistemi
             InitializeComponent();
         }
 
-       
+        SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-9F720B0;Initial Catalog=Randevu;Integrated Security=True");
+
+
         private void HastaneRandevu_Load(object sender, EventArgs e)
         {
             cmbPoliklinik.Items.AddRange(Enum.GetNames(typeof(Poliklinik)));
@@ -73,6 +75,22 @@ namespace HastaneYönetimSistemi
             RandevuGirişSayfası form2 = new RandevuGirişSayfası();
             form2.Show();
             this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SqlCommand komut = new SqlCommand("INSERT INTO RandevuZamanları (TC,Ad,Soyad,Poliklinik,Hekim,[Randevu Tarihi],[Randevu Saati]) VALUES (@TC,@Ad,@Soyad,@Poliklinik,@Hekim,@RandevuTarihi,@RandevuSaati);", baglanti);
+            komut.Parameters.AddWithValue("@TC", Convert.ToInt64(textBox3.Text));
+            komut.Parameters.AddWithValue("@Ad", textBox1.Text);
+            komut.Parameters.AddWithValue("@Soyad", textBox2.Text);
+            komut.Parameters.AddWithValue("@Poliklinik", cmbPoliklinik.Text);
+            komut.Parameters.AddWithValue("@Hekim", cmbHekim.Text);
+            komut.Parameters.AddWithValue("@RandevuTarihi", dateTimePicker1.Value);
+            komut.Parameters.AddWithValue("@RandevuSaati", dateTimePicker2.Value);
+
+            baglanti.Open();
+            komut.ExecuteNonQuery();
+            baglanti.Close();
         }
     }
 }
