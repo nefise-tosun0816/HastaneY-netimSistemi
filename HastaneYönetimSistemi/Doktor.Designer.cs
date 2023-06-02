@@ -55,22 +55,29 @@
             this.hastaneDataSet1 = new HastaneYönetimSistemi.HastaneDataSet1();
             this.doktorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.doktorTableAdapter1 = new HastaneYönetimSistemi.HastaneDataSet1TableAdapters.DoktorTableAdapter();
-            this.button5 = new System.Windows.Forms.Button();
             this.hastaneDataSet2 = new HastaneYönetimSistemi.HastaneDataSet2();
             this.doktorBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.doktorTableAdapter2 = new HastaneYönetimSistemi.HastaneDataSet2TableAdapters.DoktorTableAdapter();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.hastaneDataSet3 = new HastaneYönetimSistemi.HastaneDataSet3();
             this.doktorlarBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hastaneDataSet3 = new HastaneYönetimSistemi.HastaneDataSet3();
             this.doktorlarTableAdapter = new HastaneYönetimSistemi.HastaneDataSet3TableAdapters.DoktorlarTableAdapter();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.hastaneDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doktorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hastaneDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doktorBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hastaneDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doktorBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hastaneDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doktorlarBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hastaneDataSet3)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -206,7 +213,7 @@
             this.richTextBox1.Location = new System.Drawing.Point(317, 18);
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(244, 19);
+            this.richTextBox1.Size = new System.Drawing.Size(425, 19);
             this.richTextBox1.TabIndex = 19;
             this.richTextBox1.Text = "*****";
             this.richTextBox1.VisibleChanged += new System.EventHandler(this.richTextBox1_VisibleChanged);
@@ -221,6 +228,7 @@
             this.listBox4.Name = "listBox4";
             this.listBox4.Size = new System.Drawing.Size(258, 108);
             this.listBox4.TabIndex = 20;
+            this.listBox4.SelectedIndexChanged += new System.EventHandler(this.listBox4_SelectedIndexChanged);
             // 
             // textBox1
             // 
@@ -229,6 +237,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(148, 20);
             this.textBox1.TabIndex = 21;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Ad
             // 
@@ -237,6 +246,7 @@
             this.Ad.Name = "Ad";
             this.Ad.Size = new System.Drawing.Size(148, 20);
             this.Ad.TabIndex = 22;
+            this.Ad.TextChanged += new System.EventHandler(this.Ad_TextChanged);
             // 
             // Soyad
             // 
@@ -249,7 +259,7 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.LightGray;
-            this.button4.Location = new System.Drawing.Point(473, 325);
+            this.button4.Location = new System.Drawing.Point(649, 325);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(93, 32);
             this.button4.TabIndex = 24;
@@ -303,16 +313,6 @@
             // 
             this.doktorTableAdapter1.ClearBeforeFill = true;
             // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(345, 330);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 32;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // hastaneDataSet2
             // 
             this.hastaneDataSet2.DataSetName = "HastaneDataSet2";
@@ -327,38 +327,83 @@
             // 
             this.doktorTableAdapter2.ClearBeforeFill = true;
             // 
-            // listBox1
+            // doktorlarBindingSource
             // 
-            this.listBox1.DataSource = this.doktorlarBindingSource;
-            this.listBox1.DisplayMember = "Ad Soyad";
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(317, 46);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(247, 264);
-            this.listBox1.TabIndex = 33;
-            this.listBox1.ValueMember = "Soyad";
+            this.doktorlarBindingSource.DataMember = "Doktorlar";
+            this.doktorlarBindingSource.DataSource = this.hastaneDataSet3;
             // 
             // hastaneDataSet3
             // 
             this.hastaneDataSet3.DataSetName = "HastaneDataSet3";
             this.hastaneDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // doktorlarBindingSource
-            // 
-            this.doktorlarBindingSource.DataMember = "Doktorlar";
-            this.doktorlarBindingSource.DataSource = this.hastaneDataSet3;
-            // 
             // doktorlarTableAdapter
             // 
             this.doktorlarTableAdapter.ClearBeforeFill = true;
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7});
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(317, 46);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(425, 273);
+            this.listView1.TabIndex = 31;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "TC";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Ad";
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Soyad";
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Kullanıcı Adı";
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Dogum Tarihi";
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Cinsiyet";
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Branş";
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(317, 325);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(92, 32);
+            this.button5.TabIndex = 32;
+            this.button5.Text = "Güncelle";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // Doktor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(586, 387);
-            this.Controls.Add(this.listBox1);
+            this.ClientSize = new System.Drawing.Size(810, 373);
             this.Controls.Add(this.button5);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.button4);
@@ -389,8 +434,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.doktorBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hastaneDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doktorBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hastaneDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doktorlarBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hastaneDataSet3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -424,13 +469,20 @@
         private HastaneDataSet1 hastaneDataSet1;
         private System.Windows.Forms.BindingSource doktorBindingSource1;
         private HastaneDataSet1TableAdapters.DoktorTableAdapter doktorTableAdapter1;
-        private System.Windows.Forms.Button button5;
         private HastaneDataSet2 hastaneDataSet2;
         private System.Windows.Forms.BindingSource doktorBindingSource2;
         private HastaneDataSet2TableAdapters.DoktorTableAdapter doktorTableAdapter2;
-        private System.Windows.Forms.ListBox listBox1;
         private HastaneDataSet3 hastaneDataSet3;
         private System.Windows.Forms.BindingSource doktorlarBindingSource;
         private HastaneDataSet3TableAdapters.DoktorlarTableAdapter doktorlarTableAdapter;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.Button button5;
     }
 }

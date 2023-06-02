@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace HastaneYönetimSistemi
 {
@@ -17,6 +18,7 @@ namespace HastaneYönetimSistemi
             InitializeComponent();
             
         }
+        string connectionString = "Data Source=DESKTOP-9F720B0;Initial Catalog=YöneticiDoktorHemşireŞifreleri;Integrated Security=True";
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -42,13 +44,56 @@ namespace HastaneYönetimSistemi
 
         private void button1_Click(object sender, EventArgs e)
         {
-            YöneticiAnaSayfa yöneticiAnaSayfa = new YöneticiAnaSayfa();
-            yöneticiAnaSayfa.Show();
-            this.Hide();
 
+            string username = textBox1.Text;
+            string password = textBox2.Text;
+
+            if (CheckCredentials(username, password))
+            {
+                YöneticiAnaSayfa yöneticiAnaSayfa = new YöneticiAnaSayfa();
+                yöneticiAnaSayfa.Show();
+                this.Hide();
+                // Giriş başarılı, istediğiniz işlemleri burada gerçekleştirebilirsiniz.
+            }
+            else
+            {
+                MessageBox.Show("Kullanıcı adı veya şifre hatalı!");
+            }
+
+
+       
+
+        }
+        private bool CheckCredentials(string username, string password)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT COUNT(*) FROM YöneticiŞifre WHERE [Kullanıcı Adı] = @Username AND Şifre = @Password";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Username", username);
+                    command.Parameters.AddWithValue("@Password", password);
+
+                    connection.Open();
+                    int count = Convert.ToInt32(command.ExecuteScalar());
+                    connection.Close();
+
+                    return count > 0;
+                }
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void YöneticiGirişSayfası_Load(object sender, EventArgs e)
         {
 
         }

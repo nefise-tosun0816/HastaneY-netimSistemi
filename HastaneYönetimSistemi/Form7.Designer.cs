@@ -49,13 +49,25 @@
             this.button4 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.hastaneDataSet4 = new HastaneYönetimSistemi.HastaneDataSet4();
+            this.hemşireBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.hastaneDataSet5 = new HastaneYönetimSistemi.HastaneDataSet5();
             this.hemşireBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hastaneDataSet4 = new HastaneYönetimSistemi.HastaneDataSet4();
             this.hemşireTableAdapter = new HastaneYönetimSistemi.HastaneDataSet4TableAdapters.HemşireTableAdapter();
+            this.hemşireTableAdapter1 = new HastaneYönetimSistemi.HastaneDataSet5TableAdapters.HemşireTableAdapter();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hastaneDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hemşireBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hastaneDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hemşireBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hastaneDataSet4)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -141,6 +153,7 @@
             this.button1.TabIndex = 12;
             this.button1.Text = "Ekle";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dateTimePicker1
             // 
@@ -157,6 +170,7 @@
             this.button2.TabIndex = 16;
             this.button2.Text = "Sil";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -166,6 +180,7 @@
             this.button3.TabIndex = 17;
             this.button3.Text = "Güncelle";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // richTextBox2
             // 
@@ -189,7 +204,7 @@
             // 
             this.cmbCinsiyet.FormattingEnabled = true;
             this.cmbCinsiyet.Location = new System.Drawing.Point(124, 264);
-            this.cmbCinsiyet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbCinsiyet.Margin = new System.Windows.Forms.Padding(2);
             this.cmbCinsiyet.Name = "cmbCinsiyet";
             this.cmbCinsiyet.Size = new System.Drawing.Size(197, 21);
             this.cmbCinsiyet.TabIndex = 25;
@@ -198,7 +213,7 @@
             // 
             this.cmbBrans.FormattingEnabled = true;
             this.cmbBrans.Location = new System.Drawing.Point(124, 306);
-            this.cmbBrans.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbBrans.Margin = new System.Windows.Forms.Padding(2);
             this.cmbBrans.Name = "cmbBrans";
             this.cmbBrans.Size = new System.Drawing.Size(197, 21);
             this.cmbBrans.TabIndex = 26;
@@ -230,36 +245,87 @@
             this.label7.TabIndex = 29;
             this.label7.Text = "Kullanıcı Adı";
             // 
-            // listBox1
+            // hemşireBindingSource1
             // 
-            this.listBox1.DataSource = this.hemşireBindingSource;
-            this.listBox1.DisplayMember = "Ad Soyad";
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(378, 88);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(352, 316);
-            this.listBox1.TabIndex = 30;
+            this.hemşireBindingSource1.DataMember = "Hemşire";
+            this.hemşireBindingSource1.DataSource = this.hastaneDataSet5;
+            // 
+            // hastaneDataSet5
+            // 
+            this.hastaneDataSet5.DataSetName = "HastaneDataSet5";
+            this.hastaneDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // hemşireBindingSource
+            // 
+            this.hemşireBindingSource.DataMember = "Hemşire";
+            this.hemşireBindingSource.DataSource = this.hastaneDataSet4;
+            this.hemşireBindingSource.CurrentChanged += new System.EventHandler(this.hemşireBindingSource_CurrentChanged);
             // 
             // hastaneDataSet4
             // 
             this.hastaneDataSet4.DataSetName = "HastaneDataSet4";
             this.hastaneDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // hemşireBindingSource
-            // 
-            this.hemşireBindingSource.DataMember = "Hemşire";
-            this.hemşireBindingSource.DataSource = this.hastaneDataSet4;
-            // 
             // hemşireTableAdapter
             // 
             this.hemşireTableAdapter.ClearBeforeFill = true;
+            // 
+            // hemşireTableAdapter1
+            // 
+            this.hemşireTableAdapter1.ClearBeforeFill = true;
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7});
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(378, 89);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(352, 313);
+            this.listView1.TabIndex = 30;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "TC";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Ad";
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Soyad";
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Kullanıcı Adı";
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Doğum Tarihi";
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Cinsiyet";
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Branş";
             // 
             // Hemsire
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(743, 426);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.button4);
@@ -285,8 +351,10 @@
             this.Load += new System.EventHandler(this.Form7_Load);
             this.Shown += new System.EventHandler(this.Form7_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hastaneDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hemşireBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hastaneDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hemşireBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hastaneDataSet4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -314,9 +382,19 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ListBox listBox1;
         private HastaneDataSet4 hastaneDataSet4;
         private System.Windows.Forms.BindingSource hemşireBindingSource;
         private HastaneDataSet4TableAdapters.HemşireTableAdapter hemşireTableAdapter;
+        private HastaneDataSet5 hastaneDataSet5;
+        private System.Windows.Forms.BindingSource hemşireBindingSource1;
+        private HastaneDataSet5TableAdapters.HemşireTableAdapter hemşireTableAdapter1;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
     }
 }
