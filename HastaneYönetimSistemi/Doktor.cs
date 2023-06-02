@@ -19,9 +19,8 @@ namespace HastaneYönetimSistemi
             InitializeComponent();
         }
 
-        SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-9F720B0;Integrated Security=True;Connect Timeout=30;Encrypt=False");
-
-
+        SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-9F720B0;Initial Catalog=DoktorBilgileri;Integrated Security=True");
+       
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -81,23 +80,69 @@ namespace HastaneYönetimSistemi
 
         private void button1_Click(object sender, EventArgs e)
         {
-            listBox4.Items.Add("Kullanıcı sisteme başarıyla eklendi");
+            SqlCommand komut = new SqlCommand("INSERT INTO Doktor (TC,Ad,Soyad,[Kullanıcı Adı],[Doğum Tarihi],Cinsiyet,Branş) VALUES (@TC,@Ad,@Soyad,@KullanıcıAdı,@DoğumTarihi,@Cinsiyet,@Branş);", baglanti);
+            komut.Parameters.AddWithValue("@TC", Convert.ToInt64(textBox1.Text));
+            komut.Parameters.AddWithValue("@Ad", Ad.Text);
+            komut.Parameters.AddWithValue("@Soyad", Soyad.Text);
+            komut.Parameters.AddWithValue("@KullanıcıAdı", textBox4.Text);
+            komut.Parameters.AddWithValue("@DoğumTarihi", dateTimePicker1.Value);
+            komut.Parameters.AddWithValue("@Cinsiyet", cmbCinsiyet.SelectedItem.ToString());
+            komut.Parameters.AddWithValue("@Branş", cmbBrans.SelectedItem.ToString());
+
+            baglanti.Open();
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+
 
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            listBox4.Items.Add("Kullanıcı sistemden silindi");
+
+            try
+            {
+                SqlCommand komut1 = new SqlCommand("DELETE FROM Doktor WHERE TC = @TC",baglanti);
+                komut1.Parameters.AddWithValue("@TC", Convert.ToInt64(listView1.SelectedItems[0].SubItems[0].Text));
+
+                baglanti.Open();
+                komut1.ExecuteNonQuery();
+                baglanti.Close();   
+            }
+            catch (Exception )
+            {
+                MessageBox.Show("Veri seçiniz");
+            }
+            listView1.Items.Clear();
+            SqlCommand komut = new SqlCommand();
+            komut.CommandText = "SELECT * FROM Doktor";
+            komut.Connection = baglanti;
+
+            SqlDataAdapter adap = new SqlDataAdapter(komut);
+            DataTable tablo = new DataTable();
+
+            adap.Fill(tablo);
+
+
+            for (int i = 0; i < tablo.Rows.Count; i++)
+            {
+                listView1.Items.Add(tablo.Rows[i]["TC"].ToString());
+                listView1.Items[i].SubItems.Add(tablo.Rows[i]["Ad"].ToString());
+                listView1.Items[i].SubItems.Add(tablo.Rows[i]["Soyad"].ToString());
+                listView1.Items[i].SubItems.Add(tablo.Rows[i]["Kullanıcı Adı"].ToString());
+                listView1.Items[i].SubItems.Add(tablo.Rows[i]["Doğum Tarihi"].ToString());
+                listView1.Items[i].SubItems.Add(tablo.Rows[i]["Cinsiyet"].ToString());
+                listView1.Items[i].SubItems.Add(tablo.Rows[i]["Branş"].ToString());
+            }
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            listBox4.Items.Add("Kullanıcı güncellendi");
+           
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            baglanti.Open();
-            MessageBox.Show("Baglantı kuruldu");
+          
         }
 
         private void fillByToolStripButton_Click(object sender, EventArgs e)
@@ -115,6 +160,52 @@ namespace HastaneYönetimSistemi
 
         private void fillByToolStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
+
+        }
+
+        private void listBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Ad_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
+            SqlCommand komut = new SqlCommand();
+            komut.CommandText = "SELECT * FROM Doktor";
+            komut.Connection = baglanti;
+
+            SqlDataAdapter adap = new SqlDataAdapter(komut);
+            DataTable tablo = new DataTable();
+
+            adap.Fill(tablo);
+
+
+            for (int i = 0; i < tablo.Rows.Count; i++)
+            {
+                listView1.Items.Add(tablo.Rows[i]["TC"].ToString());
+                listView1.Items[i].SubItems.Add(tablo.Rows[i]["Ad"].ToString());
+                listView1.Items[i].SubItems.Add(tablo.Rows[i]["Soyad"].ToString());
+                listView1.Items[i].SubItems.Add(tablo.Rows[i]["Kullanıcı Adı"].ToString());
+                listView1.Items[i].SubItems.Add(tablo.Rows[i]["Doğum Tarihi"].ToString());
+                listView1.Items[i].SubItems.Add(tablo.Rows[i]["Cinsiyet"].ToString());
+                listView1.Items[i].SubItems.Add(tablo.Rows[i]["Branş"].ToString());
+            }
 
         }
     }

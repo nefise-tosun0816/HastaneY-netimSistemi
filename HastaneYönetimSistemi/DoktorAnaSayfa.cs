@@ -30,5 +30,11 @@ namespace HastaneYönetimSistemi
             doktorGiriş.Show();
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string veri = textBox1.Text;
+            listBox1.Items.Add(veri);
+        }
     }
 }

@@ -28,6 +28,13 @@ namespace HastaneYönetimSistemi
             form1.Show();
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            HastalarıGöster hastalarıgöster = new HastalarıGöster();
+            hastalarıgöster.Show();
+            this.Hide();
+        }
     } 
 }
 

@@ -39,49 +39,45 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(287, 26);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(215, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(379, 39);
+            this.label1.Size = new System.Drawing.Size(307, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Bugünün Hasta Listesi";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(111, 406);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(83, 330);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(377, 16);
+            this.label2.Size = new System.Drawing.Size(299, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Muayene işlemi için listeden hasta bilgileri üzerine çift tıklayınız.";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(115, 458);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(86, 372);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(156, 107);
+            this.button1.Size = new System.Drawing.Size(117, 87);
             this.button1.TabIndex = 2;
             this.button1.Text = "Hastayı Çağır";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(411, 458);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Location = new System.Drawing.Point(308, 372);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(156, 107);
+            this.button2.Size = new System.Drawing.Size(117, 87);
             this.button2.TabIndex = 3;
             this.button2.Text = "Hastaları Göster";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(729, 458);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Location = new System.Drawing.Point(547, 372);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(156, 107);
+            this.button3.Size = new System.Drawing.Size(117, 87);
             this.button3.TabIndex = 4;
             this.button3.Text = "Kapat";
             this.button3.UseVisualStyleBackColor = true;
@@ -89,15 +85,14 @@
             // 
             // HastaListesi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 635);
+            this.ClientSize = new System.Drawing.Size(800, 516);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "HastaListesi";
             this.Text = "HastaListesi";
             this.ResumeLayout(false);
