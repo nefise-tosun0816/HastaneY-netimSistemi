@@ -98,11 +98,14 @@ namespace HastaneYönetimSistemi
 
 
         }
+<<<<<<< HEAD
+=======
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
+>>>>>>> d1a42ffafc195b77062166c80d6ec4a771c12580
     }
 }
 

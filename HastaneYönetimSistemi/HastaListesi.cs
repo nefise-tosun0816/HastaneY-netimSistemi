@@ -38,6 +38,8 @@ namespace HastaneYönetimSistemi
             hastalarıgöster.Show();
             this.Hide();
         }
+<<<<<<< HEAD
+=======
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -108,6 +110,7 @@ namespace HastaneYönetimSistemi
         {
 
         }
+>>>>>>> d1a42ffafc195b77062166c80d6ec4a771c12580
     } 
 }
 
